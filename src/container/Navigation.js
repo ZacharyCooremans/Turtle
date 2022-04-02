@@ -1,7 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
+import {useNavigate } from 'react-router-dom'
 
 function Navigation() {
+    let navigate  = useNavigate();
     return (
         <Nav>
             <Left>
@@ -9,9 +11,10 @@ function Navigation() {
             </Left>
 
             <Right>
-                <h2>About</h2>
+                <h2 onClick={() => navigate("/About")}>About</h2>
                 <h2>Login</h2>
             </Right>
+        
         </Nav>
     )
 }
